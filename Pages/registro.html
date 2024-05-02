@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Registro de Productos - Droguería</title>
+    <link rel="stylesheet" href="../CSS/registro.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>Registro de Productos</h1>
+      <form id="productForm">
+        <label for="productName">Nombre:</label>
+        <input type="text" id="productName" maxlength="20" required />
+
+        <label for="category">Categoría:</label>
+        <select id="category" required>
+          <option value="opciones-seleccion">
+            -- Seleccionar Categoría --
+          </option>
+          <option value="medicamentos">Medicamentos</option>
+          <option value="cuidado-personal">Cuidado Personal</option>
+          <option value="productos-belleza">Belleza</option>
+          <option value="bebes">Bebés</option>
+          <option value="salud">Salud y Bienestar</option>
+          <option value="mascotas">Mascotas</option>
+          <option value="primeros-auxilios">Primeros Auxilios</option>
+          <option value="productos-hogar">Hogar</option>
+        </select>
+
+        <label for="productImage">Imagen:</label>
+        <select id="productImage" required>
+          <option value="opciones-seleccion">-- Seleccionar Imagen --</option>
+          <option value="imagen1.jpg">Imagen 1</option>
+          <option value="imagen2.jpg">Imagen 2</option>
+          <option value="imagen3.jpg">Imagen 3</option>
+          <option value="imagen4.jpg">Imagen 4</option>
+          <option value="imagen5.jpg">Imagen 5</option>
+          <option value="imagen6.jpg">Imagen 6</option>
+          <option value="imagen7.jpg">Imagen 7</option>
+          <option value="imagen8.jpg">Imagen 8</option>
+          <option value="imagen9.jpg">Imagen 9</option>
+          <option value="imagen10.jpg">Imagen 10</option>
+        </select>
+
+        <label for="price">Precio (COL):</label>
+        <input
+          type="text"
+          id="price"
+          pattern="\d+(\.\d{2})?"
+          min="500"
+          max="200000"
+          step="0.01"
+          title="Formato válido: número con máximo dos decimales"
+          required
+        />
+
+        <label for="productCode">Código de Producto:</label>
+        <input
+          type="text"
+          id="productCode"
+          maxlength="8"
+          title="Mínimo 8 caracteres, al menos una minúscula, una mayúscula y dos números"
+          required
+        />
+
+        <label for="attribute1">Atributo Adicional 1:</label>
+        <input type="text" id="attribute1" required />
+
+        <label for="attribute2">Atributo Adicional 2:</label>
+        <input type="text" id="attribute2" required />
+
+        <label for="attribute3">Atributo Adicional 3:</label>
+        <input type="text" id="attribute3" required />
+
+        <button type="submit">Registrar</button>
+        <button type="reset">Limpiar campos</button>
+      </form>
+    </div>
+    <script src="../JS/registro.js"></script>
+  </body>
+</html>

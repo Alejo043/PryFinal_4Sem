@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vista de Productos - Droguería</title>
+    <link rel="stylesheet" href="./CSS/productos.css" />
+  </head>
+  <body>
+    <header>
+      <div class="container">
+        <h1>Vista de Productos</h1>
+        <nav>
+          <button id="newProductBtn" onclick="redirectRegistro()">
+            Registrar un Nuevo Producto
+          </button>
+          <button id="searchProductBtn" onclick="redirectFiltros()">
+            Buscar un Producto
+          </button>
+        </nav>
+      </div>
+    </header>
+    <main>
+      <div class="container">
+        <section id="productos">
+          <!-- Aquí se cargarán los productos -->
+        </section>
+        <nav id="pagination">
+          <button id="prevPageBtn" onclick="paginaAnterior()" disabled>
+            Anterior
+          </button>
+          <button id="nextPageBtn" onclick="paginaSiguiente()">
+            Siguiente
+          </button>
+        </nav>
+      </div>
+    </main>
+    <script src="./JS/productos.js"></script>
+  </body>
+</html>
