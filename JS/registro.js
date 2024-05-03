@@ -36,7 +36,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const codeRegex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d.*\d)[a-zA-Z\d]{8,}$/;
     if (!codeRegex.test(productCode)) {
       alert(
-        "El código de producto es incorrecto. Debe contener al menos una minúscula, una mayúscula y dos números."
+        "El código de producto es incorrecto. Debe contener al menos una minúscula, una mayúscula y dos números.",
       );
       window.location.href = "./Pages/indicaciones.html";
       return;
@@ -58,6 +58,6 @@ document.addEventListener("DOMContentLoaded", function () {
       return;
     }
 
-    window.location.href = "index.html";
+    window.location.href = "../";
   });
 });
