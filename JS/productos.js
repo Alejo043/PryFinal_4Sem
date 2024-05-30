@@ -577,6 +577,10 @@ function mostrarProductos() {
     .join("");
   document.getElementById("productos").innerHTML = productosHTML;
 
+  // Actualizar el número de página en el label
+  const pageLabel = document.getElementById("num");
+  pageLabel.textContent = `Página ${paginaActual}`;
+
   // Habilitar/deshabilitar botones de paginación
   const prevPageBtn = document.getElementById("prevPageBtn");
   const nextPageBtn = document.getElementById("nextPageBtn");
