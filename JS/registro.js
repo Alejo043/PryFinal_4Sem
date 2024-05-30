@@ -29,7 +29,7 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     if (productImage === "opciones-seleccion") {
-      window.location.href = "./Pages/indicaciones.html";
+      window.location.href = "../Pages/indicaciones.html";
       return;
     }
 
@@ -38,23 +38,23 @@ document.addEventListener("DOMContentLoaded", function () {
       alert(
         "El código de producto es incorrecto. Debe contener al menos una minúscula, una mayúscula y dos números.",
       );
-      window.location.href = "./Pages/indicaciones.html";
+      window.location.href = "../Pages/indicaciones.html";
       return;
     }
 
     if (category === "opciones-seleccion") {
-      window.location.href = "./Pages/indicaciones.html";
+      window.location.href = "../Pages/indicaciones.html";
       return;
     }
 
     if (productImage === "opciones-seleccion") {
-      window.location.href = "./Pages/indicaciones.html";
+      window.location.href = "../Pages/indicaciones.html";
       return;
     }
 
     if (!productName || !category || !productImage || !price) {
       alert("Por favor, complete todos los campos requeridos.");
-      window.location.href = "./Pages/indicaciones.html";
+      window.location.href = "../Pages/indicaciones.html";
       return;
     }
 

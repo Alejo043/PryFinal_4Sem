@@ -20,17 +20,26 @@
         </nav>
       </div>
     </header>
+    <nav id="pagination">
+      <button id="prevPageBtnArriba" onclick="paginaAnterior()" disabled>
+        Anterior
+      </button>
+      <label id="num"></label>
+      <button id="nextPageBtnArriba" onclick="paginaSiguiente()">
+        Siguiente
+      </button>
+    </nav>
     <main>
       <div class="container">
         <section id="productos">
           <!-- Aquí se cargarán los productos -->
         </section>
         <nav id="pagination">
-          <button id="prevPageBtn" onclick="paginaAnterior()" disabled>
+          <button id="prevPageBtnAbajo" onclick="paginaAnterior()" disabled>
             Anterior
           </button>
-          <label id="num"></label>
-          <button id="nextPageBtn" onclick="paginaSiguiente()">
+          <label id="num2"></label>
+          <button id="nextPageBtnAbajo" onclick="paginaSiguiente()">
             Siguiente
           </button>
         </nav>
