@@ -44,16 +44,7 @@
         </select>
 
         <label for="price">Precio (COL):</label>
-        <input
-          type="text"
-          id="price"
-          pattern="\d+(\.\d{2})?"
-          min="500"
-          max="200000"
-          step="0.01"
-          title="Formato válido: número con máximo dos decimales"
-          required
-        />
+        <input type="number" id="price" step="0.01">
 
         <label for="productCode">Código de Producto:</label>
         <input
@@ -61,17 +52,16 @@
           id="productCode"
           maxlength="8"
           title="Mínimo 8 caracteres, al menos una minúscula, una mayúscula y dos números"
-          required
         />
 
         <label for="attribute1">Atributo Adicional 1:</label>
-        <input type="text" id="attribute1" required />
+        <input type="text" id="attribute1" />
 
         <label for="attribute2">Atributo Adicional 2:</label>
-        <input type="text" id="attribute2" required />
+        <input type="text" id="attribute2" />
 
         <label for="attribute3">Atributo Adicional 3:</label>
-        <input type="text" id="attribute3" required />
+        <input type="text" id="attribute3" />
 
         <button type="submit">Registrar</button>
         <button type="reset">Limpiar campos</button>
