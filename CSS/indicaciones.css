@@ -1,5 +1,7 @@
 body {
-  font-family: Arial, sans-serif;
+  font-family:
+    Time New Roman,
+    Time new Roman;
   background-color: #f7f7f7;
   margin: 0;
   padding: 0;
@@ -44,4 +46,8 @@ button {
 
 button:hover {
   background-color: #0056b3;
+}
+
+footer {
+  color: darkviolet;
 }

@@ -1,3 +1,6 @@
+const productosañadidos =
+  JSON.parse(localStorage.getItem("productosañadidos")) || [];
+
 document.addEventListener("DOMContentLoaded", function () {
   const form = document.getElementById("productForm");
 
@@ -12,22 +15,6 @@ document.addEventListener("DOMContentLoaded", function () {
     const attribute2 = document.getElementById("attribute2").value;
     const attribute3 = document.getElementById("attribute3").value;
 
-    const newProduct = {
-      name: productName,
-      category: category,
-      image: productImage,
-      price: price,
-      code: productCode,
-      attribute1: attribute1,
-      attribute2: attribute2,
-      attribute3: attribute3,
-    };
-
-    if (category === "opciones-seleccion") {
-      window.location.href = "../Pages/indicaciones.html";
-      return;
-    }
-
     if (
       !productName ||
       category === "opciones-seleccion" ||
@@ -37,29 +24,30 @@ document.addEventListener("DOMContentLoaded", function () {
       price > 200000 ||
       !attribute1 ||
       !attribute2 ||
-      !attribute3
+      !attribute3 ||
+      !validateProductCode(productCode)
     ) {
-      // Redirigir a la página de indicaciones si cualquier otro campo no es válido
       window.location.href = "../Pages/indicaciones.html";
       return;
     }
 
-    if (productImage === "opciones-seleccion") {
-      window.location.href = "../Pages/indicaciones.html";
-      return;
-    }
+    const nuevoProducto = {
+      name: encodeURIComponent(productName),
+      category: encodeURIComponent(category),
+      image: encodeURIComponent(productImage),
+      price: encodeURIComponent(price),
+      code: encodeURIComponent(productCode),
+      attribute1: encodeURIComponent(attribute1),
+      attribute2: encodeURIComponent(attribute2),
+      attribute3: encodeURIComponent(attribute3),
+    };
 
-    const codeRegex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d.*\d)[a-zA-Z\d]{8,}$/;
-    if (!codeRegex.test(productCode)) {
-      window.location.href = "../Pages/indicaciones.html";
-      return;
-    }
-
-    if (!productName || !category || !productImage || !price) {
-      window.location.href = "../Pages/indicaciones.html";
-      return;
-    }
-
-    window.location.href = "../";
+    const queryString = new URLSearchParams(nuevoProducto).toString();
+    window.location.href = `../?${queryString}`;
   });
+
+  function validateProductCode(code) {
+    const regex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d.*\d)[A-Za-z\d]{8,}$/;
+    return regex.test(code);
+  }
 });

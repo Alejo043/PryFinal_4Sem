@@ -599,6 +599,29 @@ const productos = [
 const productosPorPagina = 15;
 let paginaActual = 1;
 
+// Obtener los datos del nuevo producto de la URL si existen
+const urlParams = new URLSearchParams(window.location.search);
+const nuevoProducto = {
+  nombre: urlParams.get("name"),
+  categoria: urlParams.get("category"),
+  imagen: urlParams.get("image"),
+  precio: parseFloat(urlParams.get("price")),
+  codigo: urlParams.get("code"),
+  atributo1: urlParams.get("attribute1"),
+  atributo2: urlParams.get("attribute2"),
+  atributo3: urlParams.get("attribute3"),
+};
+
+// Filtrar valores nulos para identificar si hay un nuevo producto en la URL
+const nuevoProductoValido = Object.values(nuevoProducto).every(
+  (value) => value !== null,
+);
+
+// Si hay un nuevo producto válido, añadirlo a la lista de productos iniciales
+if (nuevoProductoValido) {
+  productos.push(nuevoProducto);
+}
+
 // Función para mostrar los productos en la página actual
 function mostrarProductos() {
   const startIndex = (paginaActual - 1) * productosPorPagina;
@@ -623,21 +646,21 @@ function mostrarProductos() {
   document.getElementById("productos").innerHTML = productosHTML;
 
   // Actualizar el número de página en los labels
-  const pageLabelTop = document.getElementById("num");
-  const pageLabelBottom = document.getElementById("num2");
-  pageLabelTop.textContent = `Página ${paginaActual}`;
-  pageLabelBottom.textContent = `Página ${paginaActual}`;
+  const label1 = document.getElementById("num");
+  const label2 = document.getElementById("num2");
+  label1.textContent = `Página ${paginaActual}`;
+  label2.textContent = `Página ${paginaActual}`;
 
   // Habilitar/deshabilitar botones de paginación
-  const prevPageBtnTop = document.getElementById("prevPageBtnArriba");
-  const nextPageBtnTop = document.getElementById("nextPageBtnArriba");
-  const prevPageBtnBottom = document.getElementById("prevPageBtnAbajo");
-  const nextPageBtnBottom = document.getElementById("nextPageBtnAbajo");
+  const prevPageBtnArriba = document.getElementById("prevPageBtnArriba");
+  const nextPageBtnArriba = document.getElementById("nextPageBtnArriba");
+  const prevPageBtnAbajo = document.getElementById("prevPageBtnAbajo");
+  const nextPageBtnAbajo = document.getElementById("nextPageBtnAbajo");
 
-  prevPageBtnTop.disabled = paginaActual === 1;
-  nextPageBtnTop.disabled = endIndex >= productos.length;
-  prevPageBtnBottom.disabled = paginaActual === 1;
-  nextPageBtnBottom.disabled = endIndex >= productos.length;
+  prevPageBtnArriba.disabled = paginaActual === 1;
+  nextPageBtnArriba.disabled = endIndex >= productos.length;
+  prevPageBtnAbajo.disabled = paginaActual === 1;
+  nextPageBtnAbajo.disabled = endIndex >= productos.length;
 }
 
 // Función para ir a la página anterior
@@ -665,4 +688,6 @@ function redirectFiltros() {
 }
 
 // Cargar los productos iniciales al cargar la página
-mostrarProductos();
+document.addEventListener("DOMContentLoaded", function () {
+  mostrarProductos();
+});
