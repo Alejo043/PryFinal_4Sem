@@ -32,18 +32,18 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     const nuevoProducto = {
-      name: encodeURIComponent(productName),
-      category: encodeURIComponent(category),
-      image: encodeURIComponent(productImage),
-      price: encodeURIComponent(price),
-      code: encodeURIComponent(productCode),
-      attribute1: encodeURIComponent(attribute1),
-      attribute2: encodeURIComponent(attribute2),
-      attribute3: encodeURIComponent(attribute3),
+      name: productName,
+      category: category,
+      image: productImage,
+      price: price,
+      code: productCode,
+      attribute1: attribute1,
+      attribute2: attribute2,
+      attribute3: attribute3,
     };
 
-    const queryString = new URLSearchParams(nuevoProducto).toString();
-    window.location.href = `../?${queryString}`;
+    const todosLosProductos = new URLSearchParams(nuevoProducto).toString();
+    window.location.href = `../?${todosLosProductos}`;
   });
 
   function validateProductCode(code) {
