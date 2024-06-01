@@ -10,26 +10,26 @@
     <div class="container">
       <h1>Registro de Productos</h1>
       <form id="productForm">
-        <label for="productName">Nombre:</label>
-        <input type="text" id="productName" maxlength="20" required />
+        <label for="nombre">Nombre:</label>
+        <input type="text" id="nombre" maxlength="20" required />
 
-        <label for="category">Categoría:</label>
-        <select id="category" required>
+        <label for="categoria">Categoría:</label>
+        <select id="categoria" required>
           <option value="opciones-seleccion">
             -- Seleccionar Categoría --
           </option>
-          <option value="medicamentos">Medicamentos</option>
-          <option value="cuidado-personal">Cuidado Personal</option>
-          <option value="productos-belleza">Belleza</option>
-          <option value="bebes">Bebés</option>
-          <option value="salud">Salud y Bienestar</option>
-          <option value="mascotas">Mascotas</option>
-          <option value="primeros-auxilios">Primeros Auxilios</option>
-          <option value="productos-hogar">Hogar</option>
+          <option value="Medicamentos">Medicamentos</option>
+          <option value="Cuidado Personal">Cuidado Personal</option>
+          <option value="Productos Belleza">Belleza</option>
+          <option value="Bebés">Bebés</option>
+          <option value="Salud">Salud y Bienestar</option>
+          <option value="Mascotas">Mascotas</option>
+          <option value="Primeros Auxilios">Primeros Auxilios</option>
+          <option value="Productos Hogar">Hogar</option>
         </select>
 
-        <label for="productImage">Imagen:</label>
-        <select id="productImage" required>
+        <label for="imagen">Imagen:</label>
+        <select id="imagen" required>
           <option value="opciones-seleccion">-- Seleccionar Imagen --</option>
           <option value="https://img.freepik.com/vector-premium/pildoras-medicamentos-liquidos-ninos-kawaii-doodle-ilustracion-vectorial-plana_609998-86.jpg">Medicamentos</option>
           <option value="https://centromedicodelcaribe.com/assets/uploads/noticias/_imagenMedia/CUIDADO-PERSONAL-COLON.jpg">Cuidado Personal</option>
@@ -43,25 +43,25 @@
           <option value="https://www2.claro.com.co/portal/recursos/co//cpp/promociones/imagenes/1586964921454-6-01-Cuidado%20personal.jpg">Cuidado Personal</option>
         </select>
 
-        <label for="price">Precio (COL):</label>
-        <input type="number" id="price" step="0.01">
+        <label for="precio">Precio (COL):</label>
+        <input type="number" id="precio" step="0.01">
 
-        <label for="productCode">Código de Producto:</label>
+        <label for="codProducto">Código de Producto:</label>
         <input
           type="text"
-          id="productCode"
+          id="codProducto"
           maxlength="8"
           title="Mínimo 8 caracteres, al menos una minúscula, una mayúscula y dos números"
         />
 
-        <label for="attribute1">Atributo Adicional 1:</label>
-        <input type="text" id="attribute1" />
+        <label for="atri1">Atributo Adicional 1:</label>
+        <input type="text" id="atri1" />
 
-        <label for="attribute2">Atributo Adicional 2:</label>
-        <input type="text" id="attribute2" />
+        <label for="atri2">Atributo Adicional 2:</label>
+        <input type="text" id="atri2" />
 
-        <label for="attribute3">Atributo Adicional 3:</label>
-        <input type="text" id="attribute3" />
+        <label for="atri3">Atributo Adicional 3:</label>
+        <input type="text" id="atri3" />
 
         <button type="submit">Registrar</button>
         <button type="reset">Limpiar campos</button>

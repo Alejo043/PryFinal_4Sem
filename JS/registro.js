@@ -1,50 +1,54 @@
-document.addEventListener("DOMContentLoaded", function () {
+document.addEventListener("DOMContentLoaded", () => {
   const form = document.getElementById("productForm");
 
-  form.addEventListener("submit", function (event) {
+  form.addEventListener("submit", (event) => {
     event.preventDefault();
-    const productName = document.getElementById("productName").value;
-    const category = document.getElementById("category").value;
-    const productImage = document.getElementById("productImage").value;
-    const price = document.getElementById("price").value;
-    const productCode = document.getElementById("productCode").value;
-    const attribute1 = document.getElementById("attribute1").value;
-    const attribute2 = document.getElementById("attribute2").value;
-    const attribute3 = document.getElementById("attribute3").value;
+    const nombre = document.getElementById("nombre").value;
+    const categoria = document.getElementById("categoria").value;
+    const imagen = document.getElementById("imagen").value;
+    const precio = document.getElementById("precio").value;
+    const codProducto = document.getElementById("codProducto").value;
+    const atri1 = document.getElementById("atri1").value;
+    const atri2 = document.getElementById("atri2").value;
+    const atri3 = document.getElementById("atri3").value;
 
     if (
-      !productName ||
-      category === "opciones-seleccion" ||
-      productImage === "opciones-seleccion" ||
-      !price ||
-      price < 500 ||
-      price > 200000 ||
-      !attribute1 ||
-      !attribute2 ||
-      !attribute3 ||
-      !validateProductCode(productCode)
+      !nombre ||
+      categoria === "opciones-seleccion" ||
+      imagen === "opciones-seleccion" ||
+      !precio ||
+      precio < 500 ||
+      precio > 200000 ||
+      !atri1 ||
+      !atri2 ||
+      !atri3 ||
+      !codProductoVal(codProducto)
     ) {
-      window.location.href = "../Pages/indicaciones.html";
+      dirIndicaciones();
       return;
     }
 
     const nuevoProducto = {
-      name: productName,
-      category: category,
-      image: productImage,
-      price: price,
-      code: productCode,
-      attribute1: attribute1,
-      attribute2: attribute2,
-      attribute3: attribute3,
+      name: nombre,
+      category: categoria,
+      image: imagen,
+      price: precio,
+      code: codProducto,
+      attribute1: atri1,
+      attribute2: atri2,
+      attribute3: atri3,
     };
 
     const todosLosProductos = new URLSearchParams(nuevoProducto).toString();
     window.location.href = `../?${todosLosProductos}`;
   });
 
-  function validateProductCode(code) {
+  const codProductoVal = (code) => {
     const regex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d.*\d)[A-Za-z\d]{8,}$/;
     return regex.test(code);
-  }
+  };
+
+  const dirIndicaciones = () => {
+    window.location.href = "../Pages/indicaciones.html";
+  };
 });

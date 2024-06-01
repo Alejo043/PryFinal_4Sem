@@ -623,7 +623,7 @@ if (nuevoProductoValido) {
 }
 
 // Función para mostrar los productos en la página actual
-function mostrarProductos() {
+const mostrarProductos = () => {
   const startIndex = (paginaActual - 1) * productosPorPagina;
   const endIndex = paginaActual * productosPorPagina;
   const productosHTML = productos
@@ -661,33 +661,33 @@ function mostrarProductos() {
   nextPageBtnArriba.disabled = endIndex >= productos.length;
   prevPageBtnAbajo.disabled = paginaActual === 1;
   nextPageBtnAbajo.disabled = endIndex >= productos.length;
-}
+};
 
 // Función para ir a la página anterior
-function paginaAnterior() {
+const paginaAnterior = () => {
   if (paginaActual > 1) {
     paginaActual--;
     mostrarProductos();
   }
-}
+};
 
 // Función para ir a la página siguiente
-function paginaSiguiente() {
+const paginaSiguiente = () => {
   paginaActual++;
   mostrarProductos();
-}
+};
 
 // Función para redirigir a la página de registro de productos
-function redirectRegistro() {
+const dirRegistro = () => {
   window.location.href = "./Pages/registro.html";
-}
+};
 
 // Función para redirigir a la página de filtros de búsqueda
-function redirectFiltros() {
+const dirtFiltros = () => {
   window.location.href = "./Pages/filtros.html";
-}
+};
 
 // Cargar los productos iniciales al cargar la página
-document.addEventListener("DOMContentLoaded", function () {
+document.addEventListener("DOMContentLoaded", () => {
   mostrarProductos();
 });

@@ -32,6 +32,7 @@ h2 {
 p,
 ol,
 ul {
+  display: grid;
   margin-bottom: 15px;
 }
 
