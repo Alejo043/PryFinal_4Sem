@@ -1,6 +1,3 @@
-const productosañadidos =
-  JSON.parse(localStorage.getItem("productosañadidos")) || [];
-
 document.addEventListener("DOMContentLoaded", function () {
   const form = document.getElementById("productForm");
 
