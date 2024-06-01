@@ -11,30 +11,44 @@
       <div class="container">
         <h1>Vista de Productos</h1>
         <nav>
-          <button id="newProductBtn" onclick="redirectRegistro()">
+          <button id="newProductBtn" onclick="dirRegistro()">
             Registrar un Nuevo Producto
           </button>
-          <button id="searchProductBtn" onclick="redirectFiltros()">
+          <button id="searchProductBtn" onclick="dirtFiltros()">
             Buscar un Producto
           </button>
         </nav>
       </div>
     </header>
     <main>
+      <nav id="pagination">
+        <button id="prevPageBtnArriba" onclick="paginaAnterior()" disabled>
+          Anterior
+        </button>
+        <label id="num"></label>
+        <button id="nextPageBtnArriba" onclick="paginaSiguiente()">
+          Siguiente
+        </button>
+      </nav>
       <div class="container">
         <section id="productos">
           <!-- Aquí se cargarán los productos -->
         </section>
         <nav id="pagination">
-          <button id="prevPageBtn" onclick="paginaAnterior()" disabled>
+          <button id="prevPageBtnAbajo" onclick="paginaAnterior()" disabled>
             Anterior
           </button>
-          <button id="nextPageBtn" onclick="paginaSiguiente()">
+          <label id="num2"></label>
+          <button id="nextPageBtnAbajo" onclick="paginaSiguiente()">
             Siguiente
           </button>
         </nav>
       </div>
     </main>
+    <footer>
+      <P>Farmalejo, tu fiel cadena de droguerías especializadas en productos para la salud, belleza, y el cuidado general.</P>
+      <p> &copy; 2024 Farmalejo S.A.S. &copy;  Todos los derechos reservados.</p>
+   </footer>
     <script src="./JS/productos.js"></script>
   </body>
 </html>

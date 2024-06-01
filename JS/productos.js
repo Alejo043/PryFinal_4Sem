@@ -3,7 +3,8 @@ const productos = [
     id: 1,
     nombre: "Aspirina",
     categoria: "Medicamentos",
-    imagen: "imagen1.jpg",
+    imagen:
+      "https://www.aspirina.com.co/sites/g/files/vrxlpx49176/files/2022-08/aspirina-ultra-producto_1.png",
     precio: 5000,
     codigo: "Aaa00000",
     atributo1: "Dosificación: 500 mg por tableta",
@@ -14,7 +15,8 @@ const productos = [
     id: 2,
     nombre: "Shampoo Pantene",
     categoria: "Cuidado Personal",
-    imagen: "imagen2.jpg",
+    imagen:
+      "https://static.beautytocare.com/cdn-cgi/image/width=1440,height=1200,f=auto/media/catalog/product//p/a/pantene-pro-v-nutri-plex-repair-protect-shampoo-600ml_1.jpg",
     precio: 12000,
     codigo: "Aaa00001",
     atributo1: "Tipo de producto: Shampoo",
@@ -25,7 +27,8 @@ const productos = [
     id: 3,
     nombre: "Labial Maybelline SuperStay",
     categoria: "Belleza",
-    imagen: "imagen1.jpg",
+    imagen:
+      "https://cromantic.vtexassets.com/arquivos/ids/180285-800-auto?v=638156392106900000&width=800&height=auto&aspect=true",
     precio: 18000,
     codigo: "Aaa00002",
     atributo1: "Tipo de producto: Labial líquido",
@@ -36,7 +39,8 @@ const productos = [
     id: 4,
     nombre: "Pañales Huggies Natural Care",
     categoria: "Bebés",
-    imagen: "imagen2.jpg",
+    imagen:
+      "https://copservir.vtexassets.com/arquivos/ids/1268269-800-auto?v=638459981147800000&width=800&height=auto&aspect=true",
     precio: 45000,
     codigo: "Aaa00003",
     atributo1: "Tipo de producto: Pañales desechables",
@@ -47,7 +51,8 @@ const productos = [
     id: 5,
     nombre: "Multivitamínico Centrum",
     categoria: "Salud y Bienestar",
-    imagen: "imagen1.jpg",
+    imagen:
+      "https://madeira.com.co/cdn/shop/products/300054463937_1_800x.jpg?v=1632971479",
     precio: 30000,
     codigo: "Aaa00004",
     atributo1: "Tipo de producto: Suplemento vitamínico",
@@ -58,7 +63,8 @@ const productos = [
     id: 6,
     nombre: "Alimento para gatos Whiskas",
     categoria: "Mascotas",
-    imagen: "imagen2.jpg",
+    imagen:
+      "https://vaquitaexpress.com.co/media/catalog/product/cache/e89ece728e3939ca368b457071d3c0be/7/0/706460000641_33.jpg",
     precio: 25000,
     codigo: "Aaa00005",
     atributo1: "Alimento seco para gatos",
@@ -69,7 +75,8 @@ const productos = [
     id: 7,
     nombre: "Kit de Primeros Auxilios",
     categoria: "Primeros Auxilios",
-    imagen: "imagen1.jpg",
+    imagen:
+      "https://cdn1.totalcommerce.cloud/homesentry/product-zoom/es/botiquin-005b-primeros-auxilios-13-elementos-1.webp",
     precio: 50000,
     codigo: "Aaa00006",
     atributo1: "Contenido: Vendas, gasas, alcohol, tijeras, etc.",
@@ -80,7 +87,8 @@ const productos = [
     id: 8,
     nombre: "Detergente Líquido Ariel",
     categoria: "Hogar",
-    imagen: "imagen2.jpg",
+    imagen:
+      "https://static.merqueo.com/images/products/large/976a66e7-c458-4729-9a4f-47d24aa656cf.jpg",
     precio: 15000,
     codigo: "Aaa00007",
     atributo1: "Tipo de producto: Detergente líquido para ropa",
@@ -91,7 +99,8 @@ const productos = [
     id: 9,
     nombre: "Ibuprofeno",
     categoria: "Medicamentos",
-    imagen: "imagen1.jpg",
+    imagen:
+      "https://locatelcolombia.vtexassets.com/arquivos/ids/335553/7702057442514_2_Ibuprofeno-Mk-400Mg-Caja-X-100-Tabletas-Recubiertas.jpg?v=638155611110030000",
     precio: 7000,
     codigo: "Aaa00008",
     atributo1: "Dosificación: 400 mg por tableta",
@@ -102,7 +111,8 @@ const productos = [
     id: 10,
     nombre: "Crema humectante Nivea",
     categoria: "Cuidado Personal",
-    imagen: "imagen2.jpg",
+    imagen:
+      "https://images-us.nivea.com/-/media/miscellaneous/media-center-items/8/9/c/297505-web_1010x1180_transparent_png.png",
     precio: 10000,
     codigo: "Aaa00009",
     atributo1: "Tipo de producto: Crema humectante para el cuerpo",
@@ -113,7 +123,8 @@ const productos = [
     id: 11,
     nombre: "Mascarilla facial de arcilla L'Oréal",
     categoria: "Belleza",
-    imagen: "imagen1.jpg",
+    imagen:
+      "https://i5.walmartimages.com.mx/mg/images/product-images/img_large/00750955280664l.jpg",
     precio: 25000,
     codigo: "Aaa00010",
     atributo1: "Tipo de producto: Mascarilla facial de limpieza profunda",
@@ -124,7 +135,8 @@ const productos = [
     id: 12,
     nombre: "Pañales Pampers",
     categoria: "Bebés",
-    imagen: "imagen2.jpg",
+    imagen:
+      "https://www.alkosto.com/medias/037000862239-001-750Wx750H?context=bWFzdGVyfGltYWdlc3w0NTI2NTN8aW1hZ2UvanBlZ3xhVzFoWjJWekwyZzJaaTlvTnpJdk1USXpORGM1TWpZME5EWXhNVEF1YW5CbnwyNzYwOWRlZDA1ZTcxYWMwYzY3YjJiNzBjNzE1MDhlZjQxZTA1NzEyMGZiZDRiNzMyOWEzZmZlYWZhMTE3M2Nj",
     precio: 55000,
     codigo: "Aaa00011",
     atributo1: "Tipo de producto: Pañales desechables",
@@ -135,7 +147,8 @@ const productos = [
     id: 13,
     nombre: "Omega-3 Nature Made",
     categoria: "Salud y Bienestar",
-    imagen: "imagen1.jpg",
+    imagen:
+      "https://puroestadofisico.com/cdn/shop/files/29488399974460_800x.png?v=1686048839",
     precio: 40000,
     codigo: "Aaa00012",
     atributo1: "Tipo de producto: Suplemento dietético",
@@ -146,7 +159,8 @@ const productos = [
     id: 14,
     nombre: "Comida para perros Pedigree",
     categoria: "Mascotas",
-    imagen: "imagen2.jpg",
+    imagen:
+      "https://www.agrocampo.com.co/media/catalog/product/cache/d51e0dc10c379a6229d70d752fc46d83/1/1/111101967-min.jpg",
     precio: 35000,
     codigo: "Aaa00013",
     atributo1: "Tipo de producto: Alimento seco para perros adultos",
@@ -157,7 +171,7 @@ const productos = [
     id: 15,
     nombre: "Kit de Vendajes Adhesivos",
     categoria: "Primeros Auxilios",
-    imagen: "imagen1.jpg",
+    imagen: "https://m.media-amazon.com/images/I/71QvH6DAusL.jpg",
     precio: 20000,
     codigo: "Aaa00014",
     atributo1: "Contenido: Vendajes de diferentes tamaños",
@@ -168,7 +182,8 @@ const productos = [
     id: 16,
     nombre: "Ambientador Glade",
     categoria: "Hogar",
-    imagen: "imagen2.jpg",
+    imagen:
+      "https://falabella.scene7.com/is/image/FalabellaCO/123162507_1?wid=800&hei=800&qlt=70",
     precio: 8000,
     codigo: "Aaa00015",
     atributo1: "Tipo de producto: Ambientador en aerosol",
@@ -179,7 +194,8 @@ const productos = [
     id: 17,
     nombre: "Paracetamol",
     categoria: "Medicamentos",
-    imagen: "imagen1.jpg",
+    imagen:
+      "https://www.laboratoriochile.cl/wp-content/webp-express/webp-images/doc-root/wp-content/uploads/2015/11/Paracetamol_500MG_16C_BE_HD.jpg.webp",
     precio: 4000,
     codigo: "Aaa00016",
     atributo1: "Dosificación: 500 mg por tableta",
@@ -190,7 +206,8 @@ const productos = [
     id: 18,
     nombre: "Desodorante Rexona",
     categoria: "Cuidado Personal",
-    imagen: "imagen2.jpg",
+    imagen:
+      "https://clickdelahorro.com.co/wp-content/uploads/2020/12/img_6156.png",
     precio: 9000,
     codigo: "Aaa00017",
     atributo1: "Tipo de producto: Desodorante en aerosol",
@@ -201,7 +218,8 @@ const productos = [
     id: 19,
     nombre: "Máscara de pestañas L'Oréal",
     categoria: "Belleza",
-    imagen: "imagen1.jpg",
+    imagen:
+      "https://static.sweetcare.pt/img/prd/488/v-638272855327707847/loreal-paris-013594ol_03.jpg",
     precio: 15000,
     codigo: "Aaa00018",
     atributo1: "Tipo de producto: Máscara de pestañas",
@@ -212,7 +230,8 @@ const productos = [
     id: 20,
     nombre: "Toallitas húmedas Huggies",
     categoria: "Bebés",
-    imagen: "imagen2.jpg",
+    imagen:
+      "https://copservir.vtexassets.com/arquivos/ids/1338591-800-auto?v=638517006303370000&width=800&height=auto&aspect=true",
     precio: 18000,
     codigo: "Aaa00019",
     atributo1: "Tipo de producto: Toallitas húmedas para bebés",
@@ -223,7 +242,8 @@ const productos = [
     id: 21,
     nombre: "Calcio + Vitamina D Nature's Bounty",
     categoria: "Salud y Bienestar",
-    imagen: "imagen1.jpg",
+    imagen:
+      "https://cloudinary.images-iherb.com/image/upload/f_auto,q_auto:eco/images/nrt/nrt04233/y/15.jpg",
     precio: 28000,
     codigo: "Aaa00020",
     atributo1: "Tipo de producto: Suplemento de calcio",
@@ -234,7 +254,8 @@ const productos = [
     id: 22,
     nombre: "Alimento para peces Tetra",
     categoria: "Mascotas",
-    imagen: "imagen2.jpg",
+    imagen:
+      "https://walmartcr.vtexassets.com/arquivos/ids/175753-800-450?v=637541411673400000&width=800&height=450&aspect=true",
     precio: 12000,
     codigo: "Aaa00021",
     atributo1: "Tipo de producto: Alimento en escamas para peces tropicales",
@@ -245,7 +266,8 @@ const productos = [
     id: 23,
     nombre: "Gel antiséptico para manos Germ-X",
     categoria: "Primeros Auxilios",
-    imagen: "imagen1.jpg",
+    imagen:
+      "https://locatelcolombia.vtexassets.com/arquivos/ids/232516-800-450?v=637414898282070000&width=800&height=450&aspect=true",
     precio: 6000,
     codigo: "Aaa00022",
     atributo1: "Tipo de producto: Gel desinfectante para manos",
@@ -256,7 +278,8 @@ const productos = [
     id: 24,
     nombre: "Ambientador eléctrico Air Wick",
     categoria: "Hogar",
-    imagen: "imagen2.jpg",
+    imagen:
+      "https://vixark.b-cdn.net/lp-i-i-g/ambientador-el%C3%A9ctrico-con-aroma-a-canela-y-manzana-air-wick-21ml.jpg",
     precio: 10000,
     codigo: "Aaa00023",
     atributo1: "Tipo de producto: Ambientador eléctrico con recambio",
@@ -267,7 +290,8 @@ const productos = [
     id: 25,
     nombre: "Loratadina",
     categoria: "Medicamentos",
-    imagen: "imagen1.jpg",
+    imagen:
+      "https://copservir.vtexassets.com/arquivos/ids/1266679-800-auto?v=638459552691800000&width=800&height=auto&aspect=true",
     precio: 8000,
     codigo: "Aaa00024",
     atributo1: "Dosificación: 10 mg por tableta",
@@ -278,7 +302,8 @@ const productos = [
     id: 26,
     nombre: "Jabón Dove",
     categoria: "Cuidado Personal",
-    imagen: "imagen1.jpg",
+    imagen:
+      "https://vaquitaexpress.com.co/media/catalog/product/cache/e89ece728e3939ca368b457071d3c0be/7/7/7702006201346_31.jpg",
     precio: 5000,
     codigo: "Aaa00025",
     atributo1: "Tipo de producto: Jabón en barra",
@@ -289,7 +314,8 @@ const productos = [
     id: 27,
     nombre: "Esmalte de uñas Essie",
     categoria: "Belleza",
-    imagen: "imagen2.jpg",
+    imagen:
+      "https://http2.mlstatic.com/D_NQ_NP_816242-MCO46617324569_072021-O.webp",
     precio: 12000,
     codigo: "Aaa00026",
     atributo1: "Tipo de producto: Esmalte de uñas",
@@ -300,7 +326,8 @@ const productos = [
     id: 28,
     nombre: "Leche en polvo Nestlé Nido",
     categoria: "Bebés",
-    imagen: "imagen1.jpg",
+    imagen:
+      "https://www.nestleprofessional-latam.com/sites/default/files/styles/np_product_detail/public/2023-01/NIDO%20LEP%20Instan%2026%25MG%206x1350gCL%C2%A0SKU%2012518226.png?itok=eOP0_ztb",
     precio: 40000,
     codigo: "Aaa00027",
     atributo1: "Tipo de producto: Leche en polvo para niños",
@@ -311,7 +338,8 @@ const productos = [
     id: 29,
     nombre: "Melatonina Natrol",
     categoria: "Salud y Bienestar",
-    imagen: "imagen2.jpg",
+    imagen:
+      "https://cdnx.jumpseller.com/mis-vitaminas/image/27911193/resize/610/610?16644956462.jpg",
     precio: 20000,
     codigo: "Aaa00028",
     atributo1: "Tipo de producto: Suplemento de melatonina",
@@ -322,7 +350,8 @@ const productos = [
     id: 30,
     nombre: "Alimento para pájaros Kaytee",
     categoria: "Mascotas",
-    imagen: "imagen1.jpg",
+    imagen:
+      "https://http2.mlstatic.com/D_NQ_NP_623725-MCO73000956352_112023-O.webp",
     precio: 15000,
     codigo: "Aaa00029",
     atributo1: "Tipo de producto: Mezcla de semillas para aves",
@@ -333,7 +362,8 @@ const productos = [
     id: 31,
     nombre: "Termómetro digital",
     categoria: "Primeros Auxilios",
-    imagen: "imagen2.jpg",
+    imagen:
+      "https://tmecol.com/wp-content/uploads/2021/09/TME-TermometroPR.jpg",
     precio: 18000,
     codigo: "Aaa00030",
     atributo1: "Tipo de producto: Termómetro oral y axilar",
@@ -344,7 +374,7 @@ const productos = [
     id: 32,
     nombre: "Ambientador en gel Febreze",
     categoria: "Hogar",
-    imagen: "imagen1.jpg",
+    imagen: "https://content.etilize.com/Original/1059490377.jpg",
     precio: 10000,
     codigo: "Aaa00031",
     atributo1: "Tipo de producto: Ambientador en gel",
@@ -355,7 +385,8 @@ const productos = [
     id: 33,
     nombre: "Vitamina C",
     categoria: "Medicamentos",
-    imagen: "imagen2.jpg",
+    imagen:
+      "https://media.harkercentropediatrico.com/tienda/250-large_default/vitamina-c-masticable-sobre-x-10.jpg",
     precio: 6000,
     codigo: "Aaa00032",
     atributo1: "Dosificación: 500 mg por tableta",
@@ -366,7 +397,8 @@ const productos = [
     id: 34,
     nombre: "Enjuague bucal Listerine",
     categoria: "Cuidado Personal",
-    imagen: "imagen1.jpg",
+    imagen:
+      "https://copservir.vtexassets.com/arquivos/ids/1255425-800-auto?v=638456019137430000&width=800&height=auto&aspect=true",
     precio: 8000,
     codigo: "Aaa00033",
     atributo1: "Tipo de producto: Enjuague bucal",
@@ -377,7 +409,7 @@ const productos = [
     id: 35,
     nombre: "Paleta de sombras de ojos NYX",
     categoria: "Belleza",
-    imagen: "imagen2.jpg",
+    imagen: "https://m.media-amazon.com/images/I/61SWjLCijsL._SL1001_.jpg",
     precio: 20000,
     codigo: "Aaa00034",
     atributo1: "Tipo de producto: Paleta de sombras de ojos",
@@ -388,7 +420,8 @@ const productos = [
     id: 36,
     nombre: "Toallitas húmedas Pampers",
     categoria: "Bebés",
-    imagen: "imagen1.jpg",
+    imagen:
+      "https://exitocol.vtexassets.com/arquivos/ids/11732830/TOALLITAS-HUMEDAS-BABY-FRESH-1507764_d.jpg?v=637795765677870000",
     precio: 20000,
     codigo: "Aaa00035",
     atributo1: "Tipo de producto: Toallitas húmedas para bebés",
@@ -399,7 +432,8 @@ const productos = [
     id: 37,
     nombre: "Vitamina D3",
     categoria: "Salud y Bienestar",
-    imagen: "imagen2.jpg",
+    imagen:
+      "https://cloudinary.images-iherb.com/image/upload/f_auto,q_auto:eco/images/nrt/nrt19377/y/48.jpg",
     precio: 10000,
     codigo: "Aaa00036",
     atributo1: "Tipo de producto: Suplemento de vitamina D",
@@ -410,7 +444,8 @@ const productos = [
     id: 38,
     nombre: "Alimento para conejos Oxbow",
     categoria: "Mascotas",
-    imagen: "imagen1.jpg",
+    imagen:
+      "https://hamstersmedellin.com/wp-content/uploads/2021/08/Oxbow-Oxbow-Essentials-Junior_Mesa-de-trabajo-1.png",
     precio: 30000,
     codigo: "Aaa00037",
     atributo1: "Tipo de producto: Alimento para conejos adultos",
@@ -421,7 +456,8 @@ const productos = [
     id: 39,
     nombre: "Esparadrapo adhesivo",
     categoria: "Primeros Auxilios",
-    imagen: "imagen2.jpg",
+    imagen:
+      "https://imcolmedica.com.co/wp-content/uploads/2022/03/esparadrapo-micropore-de-3-x-10-removebg-preview.png",
     precio: 5000,
     codigo: "Aaa00038",
     atributo1: "Tipo de producto: Esparadrapo de tela",
@@ -432,7 +468,7 @@ const productos = [
     id: 40,
     nombre: "Ambientador en spray Ozium",
     categoria: "Hogar",
-    imagen: "imagen1.jpg",
+    imagen: "https://m.media-amazon.com/images/I/51kXQ8hPelL.jpg",
     precio: 12000,
     codigo: "Aaa00039",
     atributo1: "Tipo de producto: Ambientador en spray",
@@ -443,7 +479,7 @@ const productos = [
     id: 41,
     nombre: "Acetaminofén",
     categoria: "Medicamentos",
-    imagen: "imagen2.jpg",
+    imagen: "https://www.disfarma.com.co/fotosproductos/macro_producto_3.jpg",
     precio: 6000,
     codigo: "Aaa00040",
     atributo1: "Dosificación: 500 mg por tableta",
@@ -454,7 +490,8 @@ const productos = [
     id: 42,
     nombre: "Crema de afeitar Gillette",
     categoria: "Cuidado Personal",
-    imagen: "imagen1.jpg",
+    imagen:
+      "https://lh3.googleusercontent.com/S6pr2PNSvAMxk5poVeI7Y5IgVDphBEcAsNU67Esp1YHxZSuBta9AOCWedR_E5uH3FyLKFQ9T_CNBKmxb-CsSTumACmyZUI_DPumNHt5xNMeELSup_A=s360",
     precio: 7000,
     codigo: "Aaa00041",
     atributo1: "Tipo de producto: Crema de afeitar para hombres",
@@ -465,7 +502,8 @@ const productos = [
     id: 43,
     nombre: "Paleta de contorno e iluminador Anastasia Beverly Hills",
     categoria: "Belleza",
-    imagen: "imagen2.jpg",
+    imagen:
+      "https://www.freyadivinavanidad.com/cdn/shop/files/c6d3c31798d768a5d5491024dadd8c56_1200x1200.jpg?v=1700185643",
     precio: 40000,
     codigo: "Aaa00042",
     atributo1: "Tipo de producto: Paleta de contorno e iluminador",
@@ -476,7 +514,8 @@ const productos = [
     id: 44,
     nombre: "Leche de fórmula Similac",
     categoria: "Bebés",
-    imagen: "imagen1.jpg",
+    imagen:
+      "https://copservir.vtexassets.com/arquivos/ids/1157069-800-auto?v=638402159558470000&width=800&height=auto&aspect=true",
     precio: 50000,
     codigo: "Aaa00043",
     atributo1: "Tipo de producto: Leche de fórmula infantil en polvo",
@@ -487,7 +526,8 @@ const productos = [
     id: 45,
     nombre: "Colágeno hidrolizado",
     categoria: "Salud y Bienestar",
-    imagen: "imagen2.jpg",
+    imagen:
+      "https://www.beautyboost.com.co/cdn/shop/files/COLAGENOCOLAMBIENTADO.jpg?v=1693583760",
     precio: 25000,
     codigo: "Aaa00044",
     atributo1: "Tipo de producto: Suplemento de colágeno en polvo",
@@ -498,7 +538,8 @@ const productos = [
     id: 46,
     nombre: "Arena para gatos Tidy Cats",
     categoria: "Mascotas",
-    imagen: "imagen1.jpg",
+    imagen:
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQyODtt3Iup52hxeiQF5UWngKxrz2zp8YThdg&s",
     precio: 20000,
     codigo: "Aaa00045",
     atributo1: "Tipo de producto: Arena aglomerante para gatos",
@@ -509,7 +550,8 @@ const productos = [
     id: 47,
     nombre: "Botiquín de viaje compacto",
     categoria: "Primeros Auxilios",
-    imagen: "imagen2.jpg",
+    imagen:
+      "https://http2.mlstatic.com/D_NQ_NP_952637-MCO52758184436_122022-O.webp",
     precio: 30000,
     codigo: "Aaa00046",
     atributo1: "Contenido: Vendajes, gasas, alcohol, tijeras, etc.",
@@ -520,7 +562,8 @@ const productos = [
     id: 48,
     nombre: "Limpiador multiusos Ajax",
     categoria: "Hogar",
-    imagen: "imagen1.jpg",
+    imagen:
+      "https://olimpica.vtexassets.com/arquivos/ids/875292-800-450?v=637937761017400000&width=800&height=450&aspect=true",
     precio: 8000,
     codigo: "Aaa00047",
     atributo1: "Tipo de producto: Limpiador líquido multiusos",
@@ -529,9 +572,10 @@ const productos = [
   },
   {
     id: 49,
-    nombre: "",
+    nombre: "Tijeras de primeros auxilios",
     categoria: "Primeros Auxilios",
-    imagen: "imagen2.jpg",
+    imagen:
+      "https://http2.mlstatic.com/D_NQ_NP_808373-MCO50698389873_072022-O.webp",
     precio: 5000,
     codigo: "Aaa00048",
     atributo1: "Tipo de producto: Tijeras de seguridad con punta roma",
@@ -542,7 +586,8 @@ const productos = [
     id: 50,
     nombre: "Desinfectante para superficies Lysol",
     categoria: "Hogar",
-    imagen: "imagen1.jpg",
+    imagen:
+      "https://olimpica.vtexassets.com/arquivos/ids/1422959/7891035001055_1.jpg?v=638512977868830000",
     precio: 12000,
     codigo: "Aaa00049",
     atributo1: "Tipo de producto: Aerosol desinfectante",
@@ -554,8 +599,31 @@ const productos = [
 const productosPorPagina = 15;
 let paginaActual = 1;
 
+// Obtener los datos del nuevo producto de la URL si existen
+const urlParams = new URLSearchParams(window.location.search);
+const nuevoProducto = {
+  nombre: urlParams.get("name"),
+  categoria: urlParams.get("category"),
+  imagen: urlParams.get("image"),
+  precio: parseFloat(urlParams.get("price")),
+  codigo: urlParams.get("code"),
+  atributo1: urlParams.get("attribute1"),
+  atributo2: urlParams.get("attribute2"),
+  atributo3: urlParams.get("attribute3"),
+};
+
+// Filtrar valores nulos para identificar si hay un nuevo producto en la URL
+const nuevoProductoValido = Object.values(nuevoProducto).every(
+  (value) => value !== null,
+);
+
+// Si hay un nuevo producto válido, añadirlo a la lista de productos iniciales
+if (nuevoProductoValido) {
+  productos.push(nuevoProducto);
+}
+
 // Función para mostrar los productos en la página actual
-function mostrarProductos() {
+const mostrarProductos = () => {
   const startIndex = (paginaActual - 1) * productosPorPagina;
   const endIndex = paginaActual * productosPorPagina;
   const productosHTML = productos
@@ -577,36 +645,49 @@ function mostrarProductos() {
     .join("");
   document.getElementById("productos").innerHTML = productosHTML;
 
+  // Actualizar el número de página en los labels
+  const label1 = document.getElementById("num");
+  const label2 = document.getElementById("num2");
+  label1.textContent = `Página ${paginaActual}`;
+  label2.textContent = `Página ${paginaActual}`;
+
   // Habilitar/deshabilitar botones de paginación
-  const prevPageBtn = document.getElementById("prevPageBtn");
-  const nextPageBtn = document.getElementById("nextPageBtn");
-  prevPageBtn.disabled = paginaActual === 1;
-  nextPageBtn.disabled = endIndex >= productos.length;
-}
+  const prevPageBtnArriba = document.getElementById("prevPageBtnArriba");
+  const nextPageBtnArriba = document.getElementById("nextPageBtnArriba");
+  const prevPageBtnAbajo = document.getElementById("prevPageBtnAbajo");
+  const nextPageBtnAbajo = document.getElementById("nextPageBtnAbajo");
+
+  prevPageBtnArriba.disabled = paginaActual === 1;
+  nextPageBtnArriba.disabled = endIndex >= productos.length;
+  prevPageBtnAbajo.disabled = paginaActual === 1;
+  nextPageBtnAbajo.disabled = endIndex >= productos.length;
+};
 
 // Función para ir a la página anterior
-function paginaAnterior() {
+const paginaAnterior = () => {
   if (paginaActual > 1) {
     paginaActual--;
     mostrarProductos();
   }
-}
+};
 
 // Función para ir a la página siguiente
-function paginaSiguiente() {
+const paginaSiguiente = () => {
   paginaActual++;
   mostrarProductos();
-}
+};
 
 // Función para redirigir a la página de registro de productos
-function redirectRegistro() {
+const dirRegistro = () => {
   window.location.href = "./Pages/registro.html";
-}
+};
 
 // Función para redirigir a la página de filtros de búsqueda
-function redirectFiltros() {
+const dirtFiltros = () => {
   window.location.href = "./Pages/filtros.html";
-}
+};
 
 // Cargar los productos iniciales al cargar la página
-mostrarProductos();
+document.addEventListener("DOMContentLoaded", () => {
+  mostrarProductos();
+});

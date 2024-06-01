@@ -1,3 +1,3 @@
 function redirect() {
-  window.location.href = "registro.html";
+  window.location.href = "../Pages/registro.html";
 }

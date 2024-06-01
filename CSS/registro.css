@@ -1,5 +1,7 @@
 body {
-  font-family: Arial, sans-serif;
+  font-family:
+    Time New Roman,
+    Time new Roman;
   background-color: #ffffff;
   margin: 0;
   padding: 0;
@@ -48,4 +50,8 @@ button {
 button[type="reset"] {
   background-color: #dc3545;
   margin-left: 10px;
+}
+
+footer {
+  color: darkviolet;
 }
