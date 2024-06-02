@@ -643,13 +643,12 @@ const esperar = (ms) => {
 };
 
 const mostrarPagina = async (pagina) => {
+  document.getElementById("cargando").style.display = "block";
   // Función que muestra la página actual
   const tablaResultados = document.getElementById("cuerpo");
   tablaResultados.innerHTML = ""; // Borra los resultados anteriores
 
-  document.getElementById("cargando").style.display = "block"; // Muestra el mensaje de "Cargando (gif)"
   await esperar(2000);
-  document.getElementById("cargando").style.display = "none"; // Oculta el mensaje de "Cargando (gif)"
 
   const inicio = (pagina - 1) * productosPorPaginaF; // Calcula el índice de inicio de la página actual
   const fin = inicio + productosPorPaginaF; // Calcula el índice de fin de la página actual
@@ -685,7 +684,7 @@ const mostrarPagina = async (pagina) => {
     );
     tablaResultados.append(fila);
   });
-
+  document.getElementById("cargando").style.display = "none";
   actualizarPaginacion();
 };
 
@@ -697,19 +696,19 @@ const actualizarPaginacion = () => {
     paginaActualF * productosPorPaginaF >= productosFiltrados.length; // Habilita o deshabilita el botón de página siguiente
 };
 
-const paginaAnterior = () => {
+const paginaAnterior = async () => {
   // Función que va a la página anterior
   if (paginaActualF > 1) {
     paginaActualF--; // Decrementa el número de página actual
-    mostrarPagina(paginaActualF); // Muestra la página actual
+    await mostrarPagina(paginaActualF); // Muestra la página actual
   }
 };
 
-const paginaSiguiente = () => {
+const paginaSiguiente = async () => {
   // Función que va a la página siguiente
   if (paginaActualF * productosPorPaginaF < productosFiltrados.length) {
     paginaActualF++; // Incrementa el número de página actual
-    mostrarPagina(paginaActualF); // Muestra la página actual
+    await mostrarPagina(paginaActualF); // Muestra la página actual
   }
 };
 

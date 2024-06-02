@@ -616,16 +616,30 @@ const nuevoProducto = {
 const nuevoProductoValido = Object.values(nuevoProducto).every(
   (value) => value !== null,
 );
-
 // Si hay un nuevo producto válido, añadirlo a la lista de productos iniciales
 if (nuevoProductoValido) {
   productos.push(nuevoProducto);
 }
 
+// Función para esperar una cantidad de milisegundos
+const esperar = (ms) => {
+  return new Promise((resolve) => {
+    setTimeout(resolve, ms);
+  });
+};
+
 // Función para mostrar los productos en la página actual
-const mostrarProductos = () => {
+const mostrarProductos = async () => {
   const startIndex = (paginaActual - 1) * productosPorPagina;
   const endIndex = paginaActual * productosPorPagina;
+
+  // Muestra el mensaje de "Cargando (gif)"
+  document.getElementById("cargando").style.display = "block";
+  document.getElementById("productos").innerHTML = "";
+
+  // Espera 2 segundos antes de continuar
+  await esperar(2000);
+
   const productosHTML = productos
     .slice(startIndex, endIndex)
     .map((producto) => {
@@ -644,6 +658,9 @@ const mostrarProductos = () => {
     })
     .join("");
   document.getElementById("productos").innerHTML = productosHTML;
+
+  // Oculta el mensaje de "Cargando (gif)"
+  document.getElementById("cargando").style.display = "none";
 
   // Actualizar el número de página en los labels
   const label1 = document.getElementById("num");
@@ -664,17 +681,17 @@ const mostrarProductos = () => {
 };
 
 // Función para ir a la página anterior
-const paginaAnterior = () => {
+const paginaAnterior = async () => {
   if (paginaActual > 1) {
     paginaActual--;
-    mostrarProductos();
+    await mostrarProductos();
   }
 };
 
 // Función para ir a la página siguiente
-const paginaSiguiente = () => {
+const paginaSiguiente = async () => {
   paginaActual++;
-  mostrarProductos();
+  await mostrarProductos();
 };
 
 // Función para redirigir a la página de productos

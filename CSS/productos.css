@@ -47,6 +47,11 @@ main {
   margin-top: 20px;
 }
 
+#cargando {
+  align-items: center;
+  text-align: center;
+}
+
 #productos {
   display: grid;
   grid-template-columns: repeat(3, minmax(250px, 1fr));
