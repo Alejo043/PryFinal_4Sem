@@ -9,7 +9,7 @@ body {
 
 .container {
   display: grid;
-  max-width: 1200px;
+  max-width: 100%;
   margin: 0 auto;
   padding: 20px;
 }
@@ -82,6 +82,7 @@ button {
   border: none;
   border-radius: 5px;
   cursor: pointer;
+  margin: 10px;
 }
 
 button[type="submit"] {

@@ -9,12 +9,13 @@ body {
 
 .container {
   display: grid;
-  max-width: 1200px;
+  max-width: 100%;
   margin: 0 auto;
   padding: 20px;
 }
 
 header {
+  text-align: center;
   width: 100%;
   display: flex;
   background-color: #24d8c0;
@@ -29,6 +30,7 @@ header h1 {
 }
 
 nav button {
+  text-align: center;
   margin-left: 10px;
   padding: 5px 10px;
   background-color: #007bff;
@@ -42,6 +44,11 @@ nav button:hover {
   background-color: #0056b3;
 }
 
+#cargando {
+  align-items: center;
+  text-align: center;
+}
+
 button {
   padding: 10px 20px;
   background-color: #007bff;
@@ -49,11 +56,84 @@ button {
   border: none;
   border-radius: 5px;
   cursor: pointer;
+  margin: 10px;
 }
 
-button[type="reset"] {
+button[id="limpiar"] {
   background-color: #dc3545;
   margin-left: 10px;
+}
+
+button[id="limpiar"]:hover {
+  background-color: #a50818;
+  margin-left: 10px;
+}
+
+button[type="clean"] {
+  background-color: #dc3545;
+  margin-left: 10px;
+}
+
+button[type="clean"]:hover {
+  background-color: #a50818;
+  margin-left: 10px;
+}
+
+#pagination {
+  text-align: center;
+  margin: 10px;
+}
+
+#pagination button {
+  margin: 0 5px;
+  padding: 5px 10px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+#pagination button:hover {
+  background-color: #0056b3;
+}
+
+#pagination button:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+main {
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+}
+
+table,
+th {
+  display: grid;
+  justify-content: center;
+  background-color: aquamarine;
+  padding: 5px;
+  margin: 10px;
+  border: 1px solid black;
+  color: #000000;
+}
+
+th,
+td {
+  text-align: center;
+  padding: 8px;
+  border: 1px solid black;
+}
+
+thead {
+  background-color: #f2f2f2;
+}
+
+#botones {
+  display: flex;
+  justify-content: space-around;
 }
 
 footer {
