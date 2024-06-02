@@ -616,7 +616,6 @@ const nuevoProducto = {
 const nuevoProductoValido = Object.values(nuevoProducto).every(
   (value) => value !== null,
 );
-
 // Si hay un nuevo producto válido, añadirlo a la lista de productos iniciales
 if (nuevoProductoValido) {
   productos.push(nuevoProducto);
@@ -642,6 +641,7 @@ const mostrarProductos = () => {
             </div>
         `;
     })
+
     .join("");
   document.getElementById("productos").innerHTML = productosHTML;
 

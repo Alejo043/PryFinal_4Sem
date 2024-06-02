@@ -1,4 +1,5 @@
 body {
+  background-image: url("https://img.freepik.com/vector-gratis/salud-ciencia-medica-elegante_1419-2183.jpg");
   font-family:
     Time New Roman,
     Time new Roman;
@@ -61,7 +62,7 @@ form {
 }
 
 label {
-  color: #04e5fe;
+  color: #000000;
   display: block;
   margin-bottom: 5px;
 }
