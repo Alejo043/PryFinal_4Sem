@@ -617,6 +617,22 @@ let productosFiltrados = productos; // Array que almacena los productos filtrado
 let paginaActualF = 1; // Número de página actual
 const productosPorPaginaF = 10; // Número de productos por página
 
+const aplicarFiltros = () => {
+  // Función que aplica los filtros a los productos
+  const filtro1 = document.getElementById("nombre").value.toLowerCase(); // Obtiene el valor del filtro 1 y lo pasa a minúsculas
+  const filtro2 = document.getElementById("precio").value; // Obtiene el valor del filtro 2
+  const filtro3 = document.getElementById("categoria").value.toLowerCase(); // Obtiene el valor del filtro 3 y lo pasa a minúsculas
+
+  productosFiltrados = productos.filter((producto) => {
+    // Filtra los productos según los filtros aplicados
+    return (
+      (filtro1 === "" || producto.nombre.toLowerCase().includes(filtro1)) &&
+      (filtro2 === "" || producto.precio >= parseFloat(filtro2)) &&
+      (filtro3 === "" || producto.categoria.toLowerCase().includes(filtro3))
+    );
+  });
+};
+
 const esperar = (ms) => {
   return new Promise((resolve, reject) => {
     if (ms <= 0) {
@@ -627,67 +643,58 @@ const esperar = (ms) => {
   });
 };
 
-const mostrarPagina = async (pagina, productosFiltrados) => {
+const mostrarPagina = async (pagina) => {
   // Función que muestra la página actual
   const tablaResultados = document.getElementById("cuerpo");
   tablaResultados.innerHTML = ""; // Borra los resultados anteriores
 
   document.getElementById("cargando").style.display = "block"; // Muestra el mensaje de "Cargando (gif)"
+  await esperar(2000);
+  document.getElementById("cargando").style.display = "none"; // Oculta el mensaje de "Cargando (gif)"
 
-  esperar(2000)
-    .then(() => {
-      // Espera 2 segundos antes de mostrar los resultados
-      document.getElementById("cargando").style.display = "none"; // Oculta el mensaje de "Cargando (gif)"
+  const inicio = (pagina - 1) * productosPorPaginaF; // Calcula el índice de inicio de la página actual
+  const fin = inicio + productosPorPaginaF; // Calcula el índice de fin de la página actual
+  const productosPagina = productosFiltrados.slice(inicio, fin); // Obtiene los productos de la página actual
 
-      const inicio = (pagina - 1) * productosPorPaginaF; // Calcula el índice de inicio de la página actual
-      const fin = inicio + productosPorPaginaF; // Calcula el índice de fin de la página actual
-      const productosPagina = productosFiltrados.slice(inicio, fin); // Obtiene los productos de la página actual
+  productosPagina.forEach((producto) => {
+    const fila = document.createElement("tr");
+    const celdaNombre = document.createElement("td");
+    const celdaCategoria = document.createElement("td");
+    const celdaImagen = document.createElement("td");
+    const celdaPrecio = document.createElement("td");
+    const celdaAtri1 = document.createElement("td");
+    const celdaAtri2 = document.createElement("td");
 
-      productosPagina.forEach((producto) => {
-        console.log(producto);
+    celdaNombre.innerText = producto.nombre; // Asigna el nombre del producto a la celda
+    celdaCategoria.innerText = producto.categoria; // Asigna la categoría del producto a la celda
+    const img = document.createElement("img"); // Crea una imagen para la celda de imagen
+    img.src = producto.imagen; // Asigna la imagen del producto a la imagen
+    img.alt = producto.nombre; // Asigna el nombre del producto como texto alternativo
+    img.style.width = "100px"; // Establece el ancho de la imagen
+    celdaImagen.appendChild(img); // Agrega la imagen a la celda de imagen
+    celdaPrecio.innerText = producto.precio; // Asigna el precio del producto a la celda
+    celdaAtri1.innerText = producto.atributo1; // Asigna el tipo de motor del producto a la celda
+    celdaAtri2.innerText = producto.atributo2; // Asigna la entrada de aire del producto a la celda
 
-        const fila = document.createElement("tr");
-        const celdaNombre = document.createElement("td");
-        const celdaCategoria = document.createElement("td");
-        const celdaImagen = document.createElement("td");
-        const celdaPrecio = document.createElement("td");
-        const celdaAtri1 = document.createElement("td");
-        const celdaAtri2 = document.createElement("td");
+    fila.append(
+      celdaNombre,
+      celdaCategoria,
+      celdaImagen,
+      celdaPrecio,
+      celdaAtri1,
+      celdaAtri2,
+    );
+    tablaResultados.append(fila);
+  });
 
-        celdaNombre.innerText = producto.nombre; // Asigna el nombre del producto a la celda
-        celdaCategoria.innerText = producto.categoria; // Asigna la categoría del producto a la celda
-        const img = document.createElement("img"); // Crea una imagen para la celda de imagen
-        img.src = producto.imagen; // Asigna la imagen del producto a la imagen
-        img.alt = producto.nombre; // Asigna el nombre del producto como texto alternativo
-        img.style.width = "100px"; // Establece el ancho de la imagen
-        celdaImagen.appendChild(img); // Agrega la imagen a la celda de imagen
-        celdaPrecio.innerText = producto.precio; // Asigna el precio del producto a la celda
-        celdaAtri1.innerText = producto.atributo1; // Asigna el tipo de motor del producto a la celda
-        celdaAtri2.innerText = producto.atributo2; // Asigna la entrada de aire del producto a la celda
-
-        fila.append(
-          celdaNombre,
-          celdaCategoria,
-          celdaImagen,
-          celdaPrecio,
-          celdaAtri1,
-          celdaAtri2,
-        );
-        cuerpo.append(fila);
-      });
-
-      actualizarPaginacion(); // Actualiza la paginación
-    })
-    .catch((error) => {
-      console.error("Error al esperar:", error);
-    });
+  actualizarPaginacion();
 };
 
 const actualizarPaginacion = () => {
   // Función que actualiza la paginación
   document.getElementById("paginaActualF").innerText = paginaActualF; // Actualiza el número de página actual
   document.getElementById("botonAnterior").disabled = paginaActualF === 1; // Habilita o deshabilita el botón de página anterior
-  document.getElementById("BotonSiguiente").disabled =
+  document.getElementById("botonSiguiente").disabled =
     paginaActualF * productosPorPaginaF >= productosFiltrados.length; // Habilita o deshabilita el botón de página siguiente
 };
 
@@ -726,38 +733,12 @@ let botonBuscar = document.getElementById("botonBuscar");
 
 const cambiarProductos = async (data) => {
   productosFiltrados = data;
-  await mostrarPagina(paginaActualF);
+  await mostrarPagina(1);
 };
 
 const filtradoProductos = () => {
-  let productosFil = productosFiltrados.filter((producto) => {
-    const valorBuscado = document
-      .getElementById("nombre")
-      .value.toLocaleLowerCase();
-    const nombreProducto = producto.nombre.toLocaleLowerCase();
-    return nombreProducto.includes(valorBuscado);
-  });
-  let productosFil2 = [];
-
-  for (let index = 0; index < productosFil.length; index++) {
-    const element = productosFil[index];
-    if (element.precio >= parseInt(document.getElementById("precio").value)) {
-      productosFil2.push(element);
-    }
-  }
-  let productosFil3 = [];
-  if (document.getElementById("categoria").value != "") {
-    let productosFil = productosFil2.filter((producto) => {
-      const valorBuscado = document
-        .getElementById("categoria")
-        .value.toLocaleLowerCase();
-      const nombreCategoria = producto.categoria.toLocaleLowerCase();
-      return nombreCategoria.includes(valorBuscado);
-    });
-    productosFil3 = productosFil;
-  }
-
-  cambiarProductos(productosFil3);
+  aplicarFiltros();
+  cambiarProductos(productosFiltrados);
 };
 
 botonBuscar.addEventListener("click", () => {
