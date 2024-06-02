@@ -619,19 +619,19 @@ const productosPorPaginaF = 10; // Número de productos por página
 
 const aplicarFiltros = () => {
   // Función que aplica los filtros a los productos
-  const filtro1 = document.getElementById("nombre").value.toLowerCase(); // Obtiene el valor del filtro 1 y lo pasa a minúsculas
-  const filtro2 = document.getElementById("precio").value; // Obtiene el valor del filtro 2
-  const filtro3 = document.getElementById("categoria").value.toLowerCase(); // Obtiene el valor del filtro 3 y lo pasa a minúsculas
-
-  productosFiltrados = productos.filter((producto) => {
-    // Filtra los productos según los filtros aplicados
-    return (
-      (filtro1 === "" || producto.nombre.toLowerCase().includes(filtro1)) &&
-      (filtro2 === "" || producto.precio >= parseFloat(filtro2)) &&
-      (filtro3 === "" || producto.categoria.toLowerCase().includes(filtro3))
-    );
-  });
-};
+  const aplicarFiltros = () => {
+    const filtro1 = document.getElementById("nombre").value.toLowerCase();
+    const filtro2 = parseFloat(document.getElementById("precio").value);
+    const filtro3 = document.getElementById("categoria").value.toLowerCase();
+  
+    productosFiltrados = productos.filter((producto) => {
+      return (
+        (filtro1 === "" || producto.nombre.toLowerCase().includes(filtro1)) &&
+        (isNaN(filtro2) || producto.precio >= filtro2) &&
+        (filtro3 === "" || producto.categoria.toLowerCase().includes(filtro3))
+      );
+    });
+  };
 
 const esperar = (ms) => {
   return new Promise((resolve, reject) => {
