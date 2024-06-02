@@ -9,19 +9,21 @@ body {
 
 .container {
   display: grid;
-  max-width: 1200px;
+  max-width: 100%;
   margin: 0 auto;
   padding: 20px;
 }
 
 header {
+  width: 100%;
   display: flex;
-  background-color: #333;
-  color: #fff;
+  background-color: #24d8c0;
+  color: #000000;
   padding: 10px 0;
 }
 
 header h1 {
+  text-align: center;
   margin: 0;
   padding: 0;
 }
@@ -94,5 +96,8 @@ main {
 }
 
 footer {
-  color: darkviolet;
+  background: rgb(17, 93, 168);
+  color: white;
+  text-align: center;
+  width: 100%;
 }

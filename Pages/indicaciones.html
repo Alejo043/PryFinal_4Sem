@@ -7,8 +7,23 @@
     <link rel="stylesheet" href="../CSS/indicaciones.css" />
   </head>
   <body>
-    <div class="container">
-      <h1>Indicaciones</h1>
+    <header>
+      <div class="container">
+        <h1>Registro de Productos</h1>
+        <nav>
+          <button id="newProductBtn" onclick="dirIndex()">
+            Home
+          </button>
+          <button id="newProductBtn" onclick="dirRegistro()">
+            Registrar un Nuevo Producto
+          </button>
+          <button id="searchProductBtn" onclick="dirtFiltros()">
+            Buscar un Producto
+          </button>
+        </nav>
+      </div>
+    </header>
+    <div class="container2">
       <h2>Descripción de la empresa</h2>
       <p>
         Nuestra empresa se especializa en proveer productos de alta calidad en
@@ -50,12 +65,14 @@
         <li>Precio: 500.00</li>
         <li>Código de Producto: Asp12345</li>
       </ul>
-      <button onclick="redirect()">Ir a Registro de productos</button>
+      <button onclick="dirRegistro()">Ir a Registro de productos</button>
     </div>
     <footer>
-      <P>Farmalejo, tu fiel cadena de droguerías especializadas en productos para la salud, belleza, y el cuidado general.</P>
-      <p> &copy; 2024 Farmalejo S.A.S. &copy;  Todos los derechos reservados.</p>
-   </footer>
+      <div class="container">
+        <P>Farmalejo, tu fiel cadena de droguerías especializadas en productos para la salud, belleza, y el cuidado general.</P>
+        <p> &copy; 2024 Farmalejo S.A.S. &copy;  Todos los derechos reservados.</p>
+      </div>
+    </footer>
     <script src="../JS/indicaciones.js"></script>
   </body>
 </html>

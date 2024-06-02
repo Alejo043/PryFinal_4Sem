@@ -7,8 +7,23 @@
     <link rel="stylesheet" href="../CSS/registro.css" />
   </head>
   <body>
-    <div class="container">
-      <h1>Registro de Productos</h1>
+    <header>
+      <div class="container">
+        <h1>Registro de Productos</h1>
+        <nav>
+          <button id="newProductBtn" onclick="dirIndex()">
+            Home
+          </button>
+          <button id="newProductBtn" onclick="dirRegistro()">
+            Registrar un Nuevo Producto
+          </button>
+          <button id="searchProductBtn" onclick="dirtFiltros()">
+            Buscar un Producto
+          </button>
+        </nav>
+      </div>
+    </header>
+    <div class="container2">
       <form id="productForm">
         <label for="nombre">Nombre:</label>
         <input type="text" id="nombre" maxlength="20" required />
@@ -44,7 +59,7 @@
         </select>
 
         <label for="precio">Precio (COL):</label>
-        <input type="number" id="precio" step="0.01">
+        <input type="number" id="precio" step="500">
 
         <label for="codProducto">Código de Producto:</label>
         <input
@@ -62,15 +77,20 @@
 
         <label for="atri3">Atributo Adicional 3:</label>
         <input type="text" id="atri3" />
-
         <button type="submit">Registrar</button>
         <button type="reset">Limpiar campos</button>
+        <button id="newProductBtn" onclick="dirIndex()">
+          Ir a Productos
+        </button>
       </form>
     </div>
+
     <footer>
-      <P>Farmalejo, tu fiel cadena de droguerías especializadas en productos para la salud, belleza, y el cuidado general.</P>
-      <p> &copy; 2024 Farmalejo S.A.S. &copy;  Todos los derechos reservados.</p>
-   </footer>
+      <div class="container">
+        <P>Farmalejo, tu fiel cadena de droguerías especializadas en productos para la salud, belleza, y el cuidado general.</P>
+        <p> &copy; 2024 Farmalejo S.A.S. &copy;  Todos los derechos reservados.</p>
+      </div>
+    </footer>
     <script src="../JS/registro.js"></script>
   </body>
 </html>

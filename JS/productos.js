@@ -677,6 +677,11 @@ const paginaSiguiente = () => {
   mostrarProductos();
 };
 
+// Función para redirigir a la página de productos
+const dirIndex = () => {
+  window.location.href = "../";
+};
+
 // Función para redirigir a la página de registro de productos
 const dirRegistro = () => {
   window.location.href = "./Pages/registro.html";

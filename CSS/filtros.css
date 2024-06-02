@@ -2,7 +2,7 @@ body {
   font-family:
     Time New Roman,
     Time new Roman;
-  background-color: #f7f7f7;
+  background-color: #ffffff;
   margin: 0;
   padding: 0;
 }
@@ -23,7 +23,7 @@ header {
 }
 
 header h1 {
-  color: #fff;
+  text-align: center;
   margin: 0;
   padding: 0;
 }
@@ -42,35 +42,6 @@ nav button:hover {
   background-color: #0056b3;
 }
 
-.container2 {
-  max-width: 800px;
-  margin: 50px auto;
-  background-color: #fff;
-  padding: 20px;
-  border-radius: 5px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
-h1 {
-  text-align: center;
-}
-
-h1,
-h2 {
-  color: #333;
-}
-
-.description {
-  font-style: italic;
-  margin-bottom: 20px;
-}
-
-p,
-ol,
-ul {
-  display: grid;
-  margin-bottom: 15px;
-}
-
 button {
   padding: 10px 20px;
   background-color: #007bff;
@@ -80,8 +51,9 @@ button {
   cursor: pointer;
 }
 
-button:hover {
-  background-color: #0056b3;
+button[type="reset"] {
+  background-color: #dc3545;
+  margin-left: 10px;
 }
 
 footer {
