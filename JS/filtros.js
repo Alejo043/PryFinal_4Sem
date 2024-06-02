@@ -617,22 +617,6 @@ let productosFiltrados = productos; // Array que almacena los productos filtrado
 let paginaActualF = 1; // Número de página actual
 const productosPorPaginaF = 10; // Número de productos por página
 
-const aplicarFiltros = () => {
-  // Función que aplica los filtros a los productos
-  const filtro1 = document.getElementById("nombre").value; // Obtiene el valor del filtro 1
-  const filtro2 = document.getElementById("precio").value; // Obtiene el valor del filtro 2
-  const filtro3 = document.getElementById("categoria").value; // Obtiene el valor del filtro 3
-
-  productosFiltrados = productos.filter((producto) => {
-    // Filtra los productos según los filtros aplicados
-    return (
-      (filtro1 === "" || producto.nombre === filtro1) &&
-      (filtro2 === "" || producto.categoria === filtro2) &&
-      (filtro3 === "" || producto.precio === filtro3)
-    );
-  });
-};
-
 const esperar = (ms) => {
   return new Promise((resolve, reject) => {
     if (ms <= 0) {
@@ -643,7 +627,7 @@ const esperar = (ms) => {
   });
 };
 
-const mostrarPagina = (pagina) => {
+const mostrarPagina = async (pagina, productosFiltrados) => {
   // Función que muestra la página actual
   const tablaResultados = document.getElementById("cuerpo");
   tablaResultados.innerHTML = ""; // Borra los resultados anteriores
@@ -737,3 +721,47 @@ const vaciarTabla = () => {
   paginaActualF = 1; // Reinicia la página actual
   actualizarPaginacion(); // Actualiza la paginación
 };
+
+let botonBuscar = document.getElementById("botonBuscar");
+
+const cambiarProductos = async (data) => {
+  productosFiltrados = data;
+  await mostrarPagina(paginaActualF);
+};
+
+const filtradoProductos = () => {
+  let productosFil = productosFiltrados.filter((producto) => {
+    const valorBuscado = document
+      .getElementById("nombre")
+      .value.toLocaleLowerCase();
+    const nombreProducto = producto.nombre.toLocaleLowerCase();
+    return nombreProducto.includes(valorBuscado);
+  });
+  let productosFil2 = [];
+
+  for (let index = 0; index < productosFil.length; index++) {
+    const element = productosFil[index];
+    if (element.precio >= parseInt(document.getElementById("precio").value)) {
+      productosFil2.push(element);
+    }
+  }
+  let productosFil3 = [];
+  if (document.getElementById("categoria").value != "") {
+    let productosFil = productosFil2.filter((producto) => {
+      const valorBuscado = document
+        .getElementById("categoria")
+        .value.toLocaleLowerCase();
+      const nombreCategoria = producto.categoria.toLocaleLowerCase();
+      return nombreCategoria.includes(valorBuscado);
+    });
+    productosFil3 = productosFil;
+  }
+
+  cambiarProductos(productosFil3);
+};
+
+botonBuscar.addEventListener("click", () => {
+  filtradoProductos();
+});
+
+mostrarPagina(paginaActualF);
