@@ -623,7 +623,7 @@ const aplicarFiltros = () => {
     const filtro1 = document.getElementById("nombre").value.toLowerCase();
     const filtro2 = parseFloat(document.getElementById("precio").value);
     const filtro3 = document.getElementById("categoria").value.toLowerCase();
-  
+
     productosFiltrados = productos.filter((producto) => {
       return (
         (filtro1 === "" || producto.nombre.toLowerCase().includes(filtro1)) &&
@@ -632,6 +632,7 @@ const aplicarFiltros = () => {
       );
     });
   };
+};
 
 const esperar = (ms) => {
   return new Promise((resolve, reject) => {
