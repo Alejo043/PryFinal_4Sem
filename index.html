@@ -9,8 +9,11 @@
   <body>
     <header>
       <div class="container">
-        <h1>Vista de Productos</h1>
+        <h1>Productos</h1>
         <nav>
+          <button id="newProductBtn" onclick="dirIndex()">
+            Home
+          </button>
           <button id="newProductBtn" onclick="dirRegistro()">
             Registrar un Nuevo Producto
           </button>
@@ -21,6 +24,7 @@
       </div>
     </header>
     <main>
+      <div class="container">
       <nav id="pagination">
         <button id="prevPageBtnArriba" onclick="paginaAnterior()" disabled>
           Anterior
@@ -30,7 +34,6 @@
           Siguiente
         </button>
       </nav>
-      <div class="container">
         <section id="productos">
           <!-- Aquí se cargarán los productos -->
         </section>
@@ -46,9 +49,11 @@
       </div>
     </main>
     <footer>
-      <P>Farmalejo, tu fiel cadena de droguerías especializadas en productos para la salud, belleza, y el cuidado general.</P>
-      <p> &copy; 2024 Farmalejo S.A.S. &copy;  Todos los derechos reservados.</p>
-   </footer>
+      <div class="container">
+        <P>Farmalejo, tu fiel cadena de droguerías especializadas en productos para la salud, belleza, y el cuidado general.</P>
+        <p> &copy; 2024 Farmalejo S.A.S. &copy;  Todos los derechos reservados.</p>
+      </div>
+    </footer>
     <script src="./JS/productos.js"></script>
   </body>
 </html>

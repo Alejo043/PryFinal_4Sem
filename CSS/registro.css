@@ -8,6 +8,40 @@ body {
 }
 
 .container {
+  display: grid;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+header {
+  width: 100%;
+  display: flex;
+  background-color: #24d8c0;
+  color: #000000;
+  padding: 10px 0;
+}
+
+header h1 {
+  margin: 0;
+  padding: 0;
+}
+
+nav button {
+  margin-left: 10px;
+  padding: 5px 10px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+nav button:hover {
+  background-color: #0056b3;
+}
+
+.container2 {
   max-width: 600px;
   margin: 50px auto;
   background-color: #04e5fe;
@@ -21,10 +55,13 @@ h1 {
 }
 
 form {
+  border-radius: 20px;
   margin-top: 20px;
+  width: 95%;
 }
 
 label {
+  color: #04e5fe;
   display: block;
   margin-bottom: 5px;
 }
@@ -47,11 +84,29 @@ button {
   cursor: pointer;
 }
 
+button[type="submit"] {
+  background-color: #007bff;
+  margin-left: 10px;
+}
+
+button[type="submit"]:hover {
+  background-color: #0056b3;
+  margin-left: 10px;
+}
+
 button[type="reset"] {
   background-color: #dc3545;
   margin-left: 10px;
 }
 
+button[type="reset"]:hover {
+  background-color: #a50818;
+  margin-left: 10px;
+}
+
 footer {
-  color: darkviolet;
+  background: rgb(17, 93, 168);
+  color: white;
+  text-align: center;
+  width: 100%;
 }
