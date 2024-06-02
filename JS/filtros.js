@@ -742,5 +742,3 @@ const filtradoProductos = () => {
 botonBuscar.addEventListener("click", () => {
   filtradoProductos();
 });
-
-mostrarPagina(paginaActualF);
