@@ -617,21 +617,21 @@ let productosFiltrados = productos; // Array que almacena los productos filtrado
 let paginaActualF = 1; // Número de página actual
 const productosPorPaginaF = 10; // Número de productos por página
 
+// Función que aplica los filtros a los productos
 const aplicarFiltros = () => {
-  // Función que aplica los filtros a los productos
-  const aplicarFiltros = () => {
-    const filtro1 = document.getElementById("nombre").value.toLowerCase();
-    const filtro2 = parseFloat(document.getElementById("precio").value);
-    const filtro3 = document.getElementById("categoria").value.toLowerCase();
+  const filtro1 = document.getElementById("nombre").value.toLowerCase();
+  const filtro2 = parseFloat(document.getElementById("precio").value);
+  const filtro3 = document.getElementById("categoria").value.toLowerCase();
 
-    productosFiltrados = productos.filter((producto) => {
-      return (
-        (filtro1 === "" || producto.nombre.toLowerCase().includes(filtro1)) &&
-        (isNaN(filtro2) || producto.precio >= filtro2) &&
-        (filtro3 === "" || producto.categoria.toLowerCase().includes(filtro3))
-      );
-    });
-  };
+  productosFiltrados = productos.filter((producto) => {
+    const cumpleFiltroNombre =
+      filtro1 === "" || producto.nombre.toLowerCase().includes(filtro1);
+    const cumpleFiltroPrecio = isNaN(filtro2) || producto.precio >= filtro2;
+    const cumpleFiltroCategoria =
+      filtro3 === "" || producto.categoria.toLowerCase().includes(filtro3);
+
+    return cumpleFiltroNombre && cumpleFiltroPrecio && cumpleFiltroCategoria;
+  });
 };
 
 const esperar = (ms) => {
