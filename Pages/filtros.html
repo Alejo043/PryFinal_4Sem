@@ -6,25 +6,76 @@
     <title>Filtros - Droguería</title>
     <link rel="stylesheet" href="../CSS/filtros.css" />
 </head>
-<body>
+<body id="body">
     <header>
         <div class="container">
           <h1>Búsqueda</h1>
           <nav>
-            <button id="newProductBtn" onclick="dirIndex()">
+            <button id="dirIndex" onclick="dirIndex()">
               Home
             </button>
-            <button id="newProductBtn" onclick="dirRegistro()">
+            <button id="dirRegistro" onclick="dirRegistro()">
               Registrar un Nuevo Producto
             </button>
-            <button id="searchProductBtn" onclick="dirtFiltros()">
+            <button id="dirtFiltro" onclick="dirtFiltros()">
               Buscar un Producto
             </button>
+            <p></p>
+            <div class="busqueda">
+              <label for="nombre">Nombre:</label>
+              <input type="text" id="nombre" maxlength="20" />
+              <label for="precio">Precio:</label>
+              <input type="number" id="precio" step="500" />
+              <label for="categoria">Categoria:</label>
+              <select name="categoria" id="categoria">
+                <option value="opciones-seleccion"></option>
+                <option value="Medicamentos">Medicamentos</option>
+                <option value="Cuidado Personal">Cuidado Personal</option>
+                <option value="Productos Belleza">Belleza</option>
+                <option value="Bebés">Bebés</option>
+                <option value="Salud">Salud y Bienestar</option>
+                <option value="Mascotas">Mascotas</option>
+                <option value="Primeros Auxilios">Primeros Auxilios</option>
+                <option value="Productos Hogar">Hogar</option>
+              </select>
+            </div>
+            <button id="botonBuscar" onclick="aplicarFiltros()">Buscar</button>
+            <button id="limpiar" onclick="vaciarFiltros()">Vaciar Campos</button>
           </nav>
         </div>
       </header>
-
-
+      <div id="cargando" class="cargando" style="display:none;">
+        <img src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExcDFmb29iN2R1bm44bmcxd3lmMmJtamxpMGxod2E2YjJjdnhidmUzeiZlcD12MV9pbnRlcm5naWZfYnlfaWQmY3Q9Zw/IzigGVSs9fHjug20Mq/giphy.gif"
+            alt="Cargando">
+    </div>
+      <main>
+        <table id="tablita" width="100%">
+            <thead>
+            <tr>
+              <td>Nombre</td>
+              <td>Categoría</td>
+              <td>Imagen</td>
+              <td>Precio</td>
+              <td>Atributo 1</td>
+              <td>Atributo 2</td>
+            </tr>
+          </thead>
+          <tbody id="cuerpo"></tbody>
+        </table>
+      </main>
+      <nav id="pagination">
+        <button id="botonAnterior" onclick="paginaAnterior()" disabled>
+          Anterior
+        </button>
+        <span id="paginaActualF"></span>
+        <button id="BotonSiguiente" onclick="paginaSiguiente()">
+          Siguiente
+        </button>
+      </nav>
+      <nav id="botones">
+        <button onclick="dirIndex()">Regresar</button>
+        <button type="clean" onclick="vaciarTabla()">Limpiar Búsqueda</button>
+      </nav>
       <footer>
         <div class="container">
           <P>Farmalejo, tu fiel cadena de droguerías especializadas en productos para la salud, belleza, y el cuidado general.</P>
